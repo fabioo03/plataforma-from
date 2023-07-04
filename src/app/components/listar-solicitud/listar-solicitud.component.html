@@ -1,0 +1,30 @@
+<h2>Lista de Solicitudes</h2>
+<p id="id-label">ID: <span id="id-value">{{ id }}</span></p>
+
+<div class="table-container">
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-header">
+        <th class="table-header-cell">Estado del Supervisor</th>
+        <th class="table-header-cell">Estado del Administrador</th>
+        <th class="table-header-cell">Fecha de última actualización</th>
+        <th class="table-header-cell">Días Solicitados</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="solicitudes && solicitudes.length > 0; else noData">
+        <tr *ngFor="let solicitud of solicitudes" class="table-row">
+          <td class="table-cell">{{ solicitud.estadossupervisor }}</td>
+          <td class="table-cell">{{ solicitud.estadosadministrador }}</td>
+          <td class="table-cell">{{ solicitud.fechacontrolestado }}</td>
+          <td class="table-cell">{{ solicitud.diassolicitados }}</td>
+        </tr>
+      </ng-container>
+      <ng-template #noData>
+        <tr>
+          <td colspan="4" class="no-data-row">No hay solicitudes disponibles</td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,215 @@
+<div class="col-md-6 offset-md-3 form-container">
+    <h3 class="text-center">Registro de empleado</h3>
+
+    <div class="button-container">
+      <button (click)="irAlaListaEmpleados()" class="btn btn-volver">Volver</button>
+    </div>
+    
+       <form (ngSubmit)= "onSubmit()" class="registration-form">  
+
+
+        <div class="form-group">
+            <label>Documento:</label>
+            <input type = "number"
+             class="form-control" 
+             id = "usuarioid"
+             [(ngModel)] = "usuarioid" required
+             name = "usuarioid"
+             >
+        </div> 
+        <div class="form-group">
+            <label>Tipo Documento:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "tipodocumento"
+             [(ngModel)] = "tipodocumento" required
+             name = "tipodocumento"
+             >
+        </div> 
+        
+     <div class="form-group">
+            <label>Primer Nombre:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "primernombre"
+             [(ngModel)] = "primernombre"
+             name = "primernombre"
+             >
+        </div> 
+
+        <div class="form-group">
+            <label>Segundo Nombre:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "segundonombre"
+             [(ngModel)] = "segundonombre"
+             name = "segundonombre"
+             >
+        </div> 
+       
+        <div class="form-group">
+            <label>Primer Apellido:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "primerapellido"
+             [(ngModel)] = "primerapellido"
+             name = "primerapellido"
+             >
+        </div>
+
+        <div class="form-group">
+            <label>Segundo Apellido:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "segundoapellido"
+             [(ngModel)] = "segundoapellido"
+             name = "segundoapellido"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Telefono:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "telefono"
+             [(ngModel)] = "telefono"
+             name = "telefono"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Calle:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "calle"
+             [(ngModel)] = "calle"
+             name = "calle"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Numero  :</label>
+            <input type = "text"
+             class="form-control" 
+             id = "numero"
+             [(ngModel)] = "numero"
+             name = "numero"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Barrio:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "barrio"
+             [(ngModel)] = "barrio"
+             name = "barrio"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Correo:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "correo"
+             [(ngModel)] = "correo"
+             name = "correo"
+             >
+        </div>
+
+        
+        <div class="form-group">
+            <label> Apodo Usuario:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "apodousuario"
+             [(ngModel)] = "apodousuario"
+             name = "apodousuario"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Contraseña:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "contrasena"
+             [(ngModel)] = "contrasena"
+             name = "contrasena"
+             >
+        </div>
+
+        <div class="form-group">
+            <label> Tipo Contrato:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "tipocontrato"
+             [(ngModel)] = "tipocontrato"
+             name = "tipocontrato"
+             >
+        </div>
+        <div class="form-group">
+            <label> Estado Contrato:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "estadocontrato"
+             [(ngModel)] = "estadocontrato"
+             name = "estadocontrato"
+             >
+        </div>
+        <div class="form-group">
+            <label>Estado Empleado:</label>
+            <input type = "text"
+             class="form-control" 
+             id = "estadoempleado"
+             [(ngModel)] = "estadoempleado"
+             name = "estadoempleado"
+             >
+        </div>
+        <div class="form-group">
+            <label> Fecha de Ingreso :</label>
+            <input type = "date"
+             class="form-control" 
+             id = "fechaingreso"
+             [(ngModel)] = "fechaingreso"
+             name = "fechaingreso"
+             >
+        </div>
+        <div class="form-group">
+            <label> Fecha de Retiro :</label>
+            <input type = "date"
+             class="form-control" 
+             id = "fecharetiro"
+             [(ngModel)] = "fecharetiro"
+             name = "fecharetiro"
+             >
+        </div>
+ <!-- 
+        <div class="form-group">
+            <label>Administrador</label>
+            <select class="form-control" id="administrador" [(ngModel)]="selectedAdministrador"
+             (change)="buscarAdministradorPorNombre(selectedAdministrador)" name="administrador">
+              <option *ngFor="let a of administradores">{{a.usuario.primernombre}}</option>
+            </select>
+          </div>
+
+          <div>
+            {{selectedAdministrador | json}}
+          </div>
+
+        <div class="form-group">
+            <label>Equipo</label>
+            <select class="form-control" id="equipo" [(ngModel)]="selectedEquipo" 
+            name="equipo"
+            (change)= "buscarEquipoPorNombre(selectedEquipo)">
+              <option *ngFor="let e of equipos">{{e.nombreequipo}}</option>
+            </select>
+          </div>
+          <div>
+            {{selectedEquipo | json}}
+          </div>
+         -->   
+       <button   class=" btn btn-success" (click)= "onSubmit()"> Guardar</button>
+
+  </form>  
+
+</div>

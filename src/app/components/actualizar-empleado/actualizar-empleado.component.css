@@ -1,0 +1,50 @@
+.form-container {
+    margin: 20px auto; /* Agrega una margen en los lados izquierdo y derecho y centra el contenedor */
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8; /* Color de fondo del contenedor */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Borde redondeado */
+}
+
+.btn-success:hover {
+    background-color: #e8b74e;
+}
+
+.btn-volver:hover {
+    background-color: #e8b74e;
+}
+.btn-volver {
+    background-color: rgb(143, 192, 244); /* color al boton de volver */
+    color: white;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    flex-basis: 48%;
+  }
+  
+  

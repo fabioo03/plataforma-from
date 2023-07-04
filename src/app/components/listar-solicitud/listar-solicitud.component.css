@@ -1,0 +1,65 @@
+/* styles.css */
+
+/* Estilos generales */
+
+.table-container {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para la tabla */
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .table-row {
+    background-color: #ffffff;
+  }
+  
+  .table-row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-row:hover {
+    background-color: #eaf7ff;
+  }
+  
+  /* Estilos para las celdas */
+  
+  .table-cell {
+    padding: 8px;
+    border: 1px solid #cccccc;
+  }
+  
+  .no-data-row {
+    font-style: italic;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  /* Estilos para los encabezados de columna */
+  
+  .table-header-cell {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    color: #000000;
+  }
+  
+  /* Estilos para el ID */
+  
+  #id-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  #id-value {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  

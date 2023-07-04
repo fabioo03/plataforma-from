@@ -1,0 +1,55 @@
+ <h2>Lista de empleados</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+         <!-- <th>Empleado N°</th>-->
+          <th>Documento</th>
+          <th>Tipo de Documento</th>
+          <th>Primer Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Primer Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Telefono</th>
+          <th>Correo</th>
+          <th>Apodo Usuario</th>
+           <!--
+          <th>Administrador</th>
+          <th>Equipo</th> -->
+          <th></th>
+        <!--  <th></th> -->
+          <th></th>
+          <th></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <!-- <td>{{empleado.id_empleado}}</td> -->
+          <td>{{empleado.usuario.usuarioid}}</td>
+          <td>{{empleado.usuario.tipodocumento}}</td>
+          <td>{{empleado.usuario.primernombre}}</td>
+          <td>{{empleado.usuario.segundonombre}}</td>
+          <td>{{empleado.usuario.primerapellido}}</td>
+          <td>{{empleado.usuario.segundoapellido}}</td>
+          <td>{{empleado.usuario.telefono}}</td>
+          <td>{{empleado.usuario.correo}}</td>
+          <td>{{empleado.usuario.apodousuario}}</td>
+           <!--
+          <td>{{empleado.administrador.usuario.primernombre}}</td>
+          <td>{{empleado.equipo.nombreequipo}}</td>-->
+          <td>
+            <button (click)= "actualizarEmpleado(empleado.id_empleado,empleado.usuario.usuarioid)" class="btn btn-warning">Editar</button>
+          </td>
+         <!-- <td>
+            <button  (click)= "elimimarEmpleado(empleado.id_empleado,empleado.usuario.usuarioid)"  class="btn btn-danger">Eliminar</button>
+          </td> -->
+          <td>
+            <button (click)="generarSolicitud(empleado.id_empleado, empleado.usuario.usuarioid)" class="btn btn-generar-solicitud">generar Solicitud</button>
+          </td>
+          <td>
+            <button  (click)= "listasolicitudes(empleado.usuario.usuarioid)"  class="btn btn-success"> Ver Solicitudes </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
